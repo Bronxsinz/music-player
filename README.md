@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title>Minimal Music Player</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; background: transparent; }
-        button { font-size: 16px; padding: 8px 12px; margin: 5px; cursor: pointer; border-radius: 5px; border: none; }
-        button:hover { background: #ddd; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            padding: 20px;
+        }
+        .player {
+            max-width: 400px;
+            margin: auto;
+            background: #1e1e1e;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            background: #1e1e1e;
+            color: white;
+            border: none;
+            outline: none;
+        }
     </style>
 </head>
 <body>
-    <audio id="bg-music" loop>
-        <source src="https://media1.vocaroo.com/mp3/1f50gBo2UxPV" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <button onclick="document.getElementById('bg-music').play()">▶ Play</button>
-    <button onclick="document.getElementById('bg-music').pause()">⏸ Pause</button>
+    <div class="player">
+        <audio id="audioPlayer" controls>
+            <source src="https://files.catbox.moe/pv9ms8.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 </body>
 </html>
